@@ -1,8 +1,7 @@
 import React, {useState} from 'react'
-import "./header.css"
-import eesLogo from "./ees_logo.png"
+import "./Header.css"
 
-function Header() {
+const Header=()=> {
  const [isDrawerOpen, setDrawerOpen] = useState(false);
 
  const handleToggle = () => {
@@ -13,16 +12,16 @@ function Header() {
     <>
     <div className={isDrawerOpen?"shadow-active":"shadow-inactive"} onClick={handleToggle}></div>
     <header>
-    <img src={eesLogo} className="logo"/>
+    <img src='./images/ees_logo.png' className="logo"/>
     <div id="ees_title">Electrical Engineering Society <br/>NIT Jamshedpur</div>
     <nav className={isDrawerOpen?"drawer-open":"drawer-close"}>
       <ul className="nav-links">
-        <li href="#">Home</li>
-        <li href="#about">About</li>
-        <li href="#events">Events</li>
-        <li href="#team">Team</li>
-        <li href="#alumnis">Alumnis</li>
-        <li href="#contactUs">Contact Us</li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#alumnis">Alumnis</a></li>
+        <li><a href="#contactUs">Contact Us</a></li>
       </ul>
     </nav>
     <div className={`burger ${isDrawerOpen ? 'toggle' : ''}`} onClick={handleToggle}>
